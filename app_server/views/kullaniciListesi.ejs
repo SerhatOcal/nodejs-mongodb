@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>isim</th>
+                <th>Soyisim</th>
+                <th>email</th>
+                <th>kullaniciadi</th>
+                <th>işlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(var i=0; i < kullanicilar.length;i++){%>
+                <tr class="info">
+                    <td><%=i+1%></td>
+                    <td><%=kullanicilar[i].ad%></td>
+                    <td><%=kullanicilar[i].soyad%></td>
+                    <td><%=kullanicilar[i].email%></td>
+                    <td><%=kullanicilar[i].kullaniciadi%></td>
+                    <td><a href="kullaniciSil/<%=kullanicilar[i].ad%>" class="btn btn-danger">Sil</a></td>
+                </tr>
+            <%}%>
+
+        </tbody>
+
+    </table>
+</div>
